@@ -23,7 +23,7 @@ def less(v, w) -> bool:
 
 
 def is_sorted(a):
-    for i in range (1, len(a)):
+    for i in range(1, len(a)):
         if less(a[i], a[i-1]):
             return False
     return True
@@ -31,8 +31,11 @@ def is_sorted(a):
 
 if __name__ == 'main':
     assert less(0, 0.111) is True
+    assert less(-10, 0.111) is True
     assert is_sorted([1, 2, 3, 4, 5, 6, 7, 8]) is True
     assert is_sorted([1, 2, 3, 4, 5, 6, 8, 7]) is False
+    assert compare_to(0, 1) == -1
+    assert compare_to(-10, 0.111) == -1
 
     a = ['A', 'C', 'B']
     assert exch(a, 2, 1) == ['A', 'B', 'C']
