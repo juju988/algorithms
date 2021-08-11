@@ -11,6 +11,13 @@ def compare_to(v, w) -> int:
         return 1
 
 
+def exch(a: list, i: int, j: int) -> list:
+    temp = a[i]
+    a[i] = a[j]
+    a[j] = temp
+    return a
+
+
 def less(v, w) -> bool:
     return compare_to(v, w) < 0
 
@@ -26,3 +33,6 @@ if __name__ == 'main':
     assert less(0, 0.111) is True
     assert is_sorted([1, 2, 3, 4, 5, 6, 7, 8]) is True
     assert is_sorted([1, 2, 3, 4, 5, 6, 8, 7]) is False
+
+    a = ['A', 'C', 'B']
+    assert exch(a, 2, 1) == ['A', 'B', 'C']
