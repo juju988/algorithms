@@ -21,7 +21,7 @@ def timeRandomInput(alg: str, N: int, T: int) -> float:
     for t in range(0, T):
         for i in range(0, N):
             a[i] = np.random.uniform()
-        total += timer_time(alg, a)
+        total += time_algorithm(alg, a)
     return total
 
 
@@ -33,7 +33,7 @@ def main(args):
     t1 = timeRandomInput(alg1, N, T)    # total for alg1
     t2 = timeRandomInput(alg2, N, T)    # total for alg2
     print(f'for {N} random floats\n {alg1} is')
-    print(f'for {round(t1/t2, 1)} times faster than {alg2}\n')
+    print(f'{round(t1/t2, 1)}\n times faster than {alg2}')
 
 
 if __name__ == "__main__":

@@ -3,6 +3,13 @@ import cProfile
 import time
 
 
+def time_algorithm(alg: str, a: list) -> float:
+    timer = time.time()
+    insertion_sort(a) if alg == "Insertion" else False
+    selection_sort(a) if alg == "Selection" else False
+    return time.time() - timer
+
+
 def selection_sort(a: list) -> list:
     n = len(a)
     for i, _ in enumerate(a):
@@ -11,7 +18,7 @@ def selection_sort(a: list) -> list:
             if less(a[j], a[mn]):
                 mn = j
         exch(a, i, mn)
-    print(a)
+    #print(a)
     return a
 
 
