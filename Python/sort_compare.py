@@ -1,5 +1,5 @@
 import sys
-import elementary_sorts
+from elementary_sorts import insertion_sort, selection_sort
 import time
 import numpy as np
 
@@ -7,9 +7,12 @@ import numpy as np
     p256 of Algorithms book
 """
 
-def timer_time(alg: str, a: []) -> float:
-    # TODO: see text
-    pass
+
+def time_algorithm(alg: str, a: list) -> float:
+    timer = time.time()
+    insertion_sort(a) if alg == "Insertion" else False
+    selection_sort(a) if alg == "Selection" else False
+    return time.time() - timer
 
 
 def timeRandomInput(alg: str, N: int, T: int) -> float:
