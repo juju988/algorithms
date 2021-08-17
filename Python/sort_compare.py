@@ -3,6 +3,9 @@ import elementary_sorts
 import time
 import numpy as np
 
+"""
+    p256 of Algorithms book
+"""
 
 def timer_time(alg: str, a: []) -> float:
     # TODO: see text
@@ -11,7 +14,7 @@ def timer_time(alg: str, a: []) -> float:
 
 def timeRandomInput(alg: str, N: int, T: int) -> float:
     total = 0.0
-    a = np.array((N), np.float)
+    a = np.zeros(N)
     for t in range(0, T):
         for i in range(0, N):
             a[i] = np.random.uniform()
@@ -32,7 +35,11 @@ def main(args):
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Not enough arguments supplied - 2 different algorithms required")
+        print("Not enough arguments supplied - 2 different algorithms and 2 integers required")
+        print("e.g. sort_compare Insertion Selection 1000 100")
         exit(1)
+    else:
+        print(sys.argv[1:4])
+        main(sys.argv)
 
 
