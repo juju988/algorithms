@@ -32,7 +32,24 @@ def insertion_sort(a: list) -> list:
     return a
 
 
-if __name__ == 'main':
+def shell_sort(a: list) -> list:
+    n = len(a)
+    h = 1
+    while (h < n/3):
+        h = (3 * h) + 1
+    while h >= 1:
+        print(h)
+        for i in range(int(h), n):
+            j = int(i)
+            h = int(h)
+            while j >= h and less(a[j], a[j-h]):
+                exch(a, j, j-h)
+                j -= h
+        h = h/3
+    return a
+
+
+if __name__ == '__main__':
     a = 'SORTEXAMPLE'
     assert selection_sort(list(a)) == list('AEELMOPRSTX')
     cProfile.runctx('selection_sort(a)', {'a': list(a), 'selection_sort': selection_sort}, {})
@@ -42,7 +59,13 @@ if __name__ == 'main':
     cProfile.runctx('insertion_sort(a)', {'a': list(a), 'insertion_sort': insertion_sort}, {})
     print(time_algorithm('Insertion', list(a)))
 
+    a = 'SHELLSORTEXAMPLE'
+    assert shell_sort(list(a)) == list('AEEEHLLLMOPRSSTX')
+    cProfile.runctx('shell_sort(a)', {'a': list(a), 'shell_sort': selection_sort}, {})
+    print(time_algorithm('Shell', list(a)))
+
     with open('ishmael.txt', 'r', encoding='utf-8') as f:
         line = f.readline()
         print(time_algorithm('Selection', list(line)))
         print(time_algorithm('Insertion', list(line)))
+        print(time_algorithm('Shell', list(line)))
