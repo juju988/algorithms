@@ -70,9 +70,9 @@ if __name__ == '__main__':
 
     with open('ishmael.txt', 'r', encoding='utf-8') as f:
         line = f.readline()
-        print(time_algorithm('Selection', list(line)))
-        print(time_algorithm('Insertion', list(line)))
-        print(time_algorithm('Shell', list(line)))
+        print(f"Selection sort time: {time_algorithm('Selection', list(line))}")
+        print(f"Insertion sort time: {time_algorithm('Insertion', list(line))}")
+        print(f"Shell sort time: {time_algorithm('Shell', list(line))}")
 
         print('still running - on last test')
 

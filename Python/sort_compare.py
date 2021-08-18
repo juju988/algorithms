@@ -43,14 +43,15 @@ def main(args):
     print(f'{alg1} time: {t1}')
     t2 = timeRandomInput(alg2, N, T)    # total for alg2
     print(f'{alg2} time: {t2}')
-    print(f'for {N} random floats\n {alg1} is')
-    print(f'{t1/t2}\n times faster than {alg2}')
+    print(f'for {N} random floats\n {alg2} is')
+    print(f'{t1/t2}\n times faster than {alg1}')
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Not enough arguments supplied - 2 different algorithms and 2 integers required")
         print("e.g. sort_compare Insertion Selection 1000 100")
+        print("Generally put the fastest alg second")
         exit(1)
     else:
         print(sys.argv[1:4])

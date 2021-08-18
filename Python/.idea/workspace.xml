@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="be90a23f-a41e-4113-a2a2-e35e284a3aaa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elementary_sorts.py" beforeDir="false" afterPath="$PROJECT_DIR$/elementary_sorts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mergesort.py" beforeDir="false" afterPath="$PROJECT_DIR$/mergesort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sort_compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/sort_compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1wZx5NOqxfLbl4lh2BMejnyTKgU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
