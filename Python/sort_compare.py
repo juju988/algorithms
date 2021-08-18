@@ -17,6 +17,14 @@ def time_algorithm(alg: str, a: list) -> float:
 
 
 def timeRandomInput(alg: str, N: int, T: int) -> float:
+    """
+    Creates an array of length N. Then for T times populates
+    that with random numbers and sends it off to alg for sorting.
+    :param alg:
+    :param N:
+    :param T:
+    :return: float
+    """
     total = 0.0
     a = np.zeros(N)
     for t in range(0, T):
@@ -32,9 +40,11 @@ def main(args):
     N = int(args[3])
     T = int(args[4])
     t1 = timeRandomInput(alg1, N, T)    # total for alg1
+    print(f'{alg1} time: {t1}')
     t2 = timeRandomInput(alg2, N, T)    # total for alg2
+    print(f'{alg2} time: {t2}')
     print(f'for {N} random floats\n {alg1} is')
-    print(f'{round(t1/t2, 1)}\n times faster than {alg2}')
+    print(f'{t1/t2}\n times faster than {alg2}')
 
 
 if __name__ == "__main__":
