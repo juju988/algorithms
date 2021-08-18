@@ -7,6 +7,7 @@ def time_algorithm(alg: str, a: list) -> float:
     timer = time.time()
     insertion_sort(a) if alg == "Insertion" else False
     selection_sort(a) if alg == "Selection" else False
+    shell_sort(a) if alg == "Shell" else False
     return time.time() - timer
 
 
@@ -18,7 +19,6 @@ def selection_sort(a: list) -> list:
             if less(a[j], a[mn]):
                 mn = j
         exch(a, i, mn)
-    #print(a)
     return a
 
 
@@ -33,12 +33,16 @@ def insertion_sort(a: list) -> list:
 
 
 def shell_sort(a: list) -> list:
+    """
+    This is loads quicker than insertion and selection sort
+    :param a list:
+    :return sorted list:
+    """
     n = len(a)
     h = 1
     while (h < n/3):
         h = (3 * h) + 1
     while h >= 1:
-        print(h)
         for i in range(int(h), n):
             j = int(i)
             h = int(h)
@@ -69,3 +73,11 @@ if __name__ == '__main__':
         print(time_algorithm('Selection', list(line)))
         print(time_algorithm('Insertion', list(line)))
         print(time_algorithm('Shell', list(line)))
+
+        print('still running - on last test')
+
+        sorted_selection = selection_sort(list(line))
+        sorted_insertion = insertion_sort(list(line))
+        sorted_shell = shell_sort(list(line))
+        assert sorted_selection == sorted_insertion
+        assert sorted_insertion == sorted_shell

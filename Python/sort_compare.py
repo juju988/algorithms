@@ -1,5 +1,5 @@
 import sys
-from elementary_sorts import insertion_sort, selection_sort
+from elementary_sorts import insertion_sort, selection_sort, shell_sort
 import time
 import numpy as np
 
@@ -12,6 +12,7 @@ def time_algorithm(alg: str, a: list) -> float:
     timer = time.time()
     insertion_sort(a) if alg == "Insertion" else False
     selection_sort(a) if alg == "Selection" else False
+    shell_sort(a) if alg == "Shell" else False
     return time.time() - timer
 
 
@@ -44,5 +45,3 @@ if __name__ == "__main__":
     else:
         print(sys.argv[1:4])
         main(sys.argv)
-
-

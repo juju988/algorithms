@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be90a23f-a41e-4113-a2a2-e35e284a3aaa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mergesort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elementary_sorts.py" beforeDir="false" afterPath="$PROJECT_DIR$/elementary_sorts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ishmael.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ishmael.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort_compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/sort_compare.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
